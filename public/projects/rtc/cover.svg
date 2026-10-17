@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs>
+    <radialGradient id="grad-rtc" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95"/>
+    </radialGradient>
+    <linearGradient id="line-rtc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="#0b1120"/>
+  <rect width="1200" height="675" fill="url(#grad-rtc)"/>
+  <g opacity="0.15" stroke="#38bdf8" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+  <rect x="150" y="140" width="900" height="395" rx="20" fill="#0f172a" stroke="#38bdf8" stroke-width="2" opacity="0.9"/>
+  <circle cx="210" cy="190" r="8" fill="#ef4444"/>
+  <circle cx="235" cy="190" r="8" fill="#f59e0b"/>
+  <circle cx="260" cy="190" r="8" fill="#10b981"/>
+  <text x="600" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="bold" fill="#ffffff" text-anchor="middle">RTC Operations Platform</text>
+  <text x="600" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="500" fill="#38bdf8" text-anchor="middle">Volunteer Operations &amp; Participation Platform</text>
+  <rect x="475" y="425" width="250" height="36" rx="18" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1"/>
+  <text x="600" y="449" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#38bdf8" text-anchor="middle">React • Supabase RLS • TypeScript</text>
+</svg>

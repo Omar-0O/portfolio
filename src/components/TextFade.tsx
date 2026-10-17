@@ -1,4 +1,3 @@
-'use client';
 import { motion, useInView } from 'framer-motion';
 import * as React from 'react';
 
@@ -13,6 +12,7 @@ export function TextFade({
   className?: string;
   staggerChildren?: number;
 }) {
+  
   const FADE_DOWN = {
     show: { opacity: 1, y: 0, transition: { type: 'spring' } },
     hidden: { opacity: 0, y: direction === 'down' ? -8 : 8 },

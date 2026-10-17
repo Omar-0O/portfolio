@@ -1,6 +1,12 @@
 {
-  "icon": [
-    { "src": "favicon-192.png", "type": "img.png", "sizes": "192x192" },
-    { "src": "favicon-512.png", "type": "img.png", "sizes": "512x512" }
+  "name": "Omar Mohamed - Portfolio",
+  "short_name": "Omar Mohamed",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070217",
+  "theme_color": "#a166ff",
+  "icons": [
+    { "src": "favicon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "favicon-512.png", "type": "image/png", "sizes": "512x512" }
   ]
 }

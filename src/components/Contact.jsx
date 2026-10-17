@@ -8,6 +8,8 @@ import SectionWrapper from './hoc/SectionWrapper';
 import { slideIn } from '../utils/motion';
 import Socials from './Socials';
 import { toast } from 'react-toastify';
+import { PERSONAL_INFO } from '../constants';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
   const formRef = useRef();
@@ -83,10 +85,63 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
-        className="flex-[0.75] relative bg-transparent border-tertiary border-2 p-8 rounded-lg"
+        className="flex-[0.75] relative bg-transparent border-tertiary border-2 p-8 rounded-2xl"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={`${styles.sectionHeadText} sm:mb-12`}>Contact</h3>
+        <h3 className={`${styles.sectionHeadText} sm:mb-6 mb-4`}>Contact</h3>
+
+        {/* Direct Contact Cards */}
+        <div className="grid grid-cols-1 gap-3 mb-8 sm:grid-cols-3">
+          <a
+            href={`mailto:${PERSONAL_INFO.email}`}
+            className="flex items-center gap-3 p-3 transition-all border rounded-xl bg-primary-semi/80 border-tertiary/40 hover:border-tertiary group"
+            title="Send Email"
+          >
+            <div className="p-2.5 transition-colors rounded-lg bg-tertiary-transparent text-tertiary group-hover:bg-tertiary group-hover:text-primary shrink-0">
+              <Mail size={18} />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase font-semibold tracking-wider text-white-200">
+                Email
+              </p>
+              <p className="text-xs font-medium text-white truncate group-hover:text-tertiary transition-colors">
+                {PERSONAL_INFO.email}
+              </p>
+            </div>
+          </a>
+
+          <a
+            href={`tel:${PERSONAL_INFO.phone.replace(/\s+/g, '')}`}
+            className="flex items-center gap-3 p-3 transition-all border rounded-xl bg-primary-semi/80 border-tertiary/40 hover:border-tertiary group"
+            title="Call Phone"
+          >
+            <div className="p-2.5 transition-colors rounded-lg bg-tertiary-transparent text-tertiary group-hover:bg-tertiary group-hover:text-primary shrink-0">
+              <Phone size={18} />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase font-semibold tracking-wider text-white-200">
+                Phone
+              </p>
+              <p className="text-xs font-medium text-white truncate group-hover:text-tertiary transition-colors">
+                {PERSONAL_INFO.phone}
+              </p>
+            </div>
+          </a>
+
+          <div className="flex items-center gap-3 p-3 border rounded-xl bg-primary-semi/80 border-tertiary/40">
+            <div className="p-2.5 rounded-lg bg-tertiary-transparent text-tertiary shrink-0">
+              <MapPin size={18} />
+            </div>
+            <div className="min-w-0">
+              <p className="text-[10px] uppercase font-semibold tracking-wider text-white-200">
+                Location
+              </p>
+              <p className="text-xs font-medium text-white truncate">
+                {PERSONAL_INFO.location}
+              </p>
+            </div>
+          </div>
+        </div>
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -99,7 +154,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Gin Ryo"
+              placeholder="Your name"
               className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200 placeholder:opacity-50"
             />
           </label>
@@ -110,10 +165,11 @@ const Contact = () => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="ahmed@gryo.com"
+              placeholder="your.email@example.com"
               className="px-6 py-4 font-medium text-white bg-opacity-50 border-none rounded-lg outline-none bg-primary-semi font-para placeholder:text-white-200 placeholder:opacity-50"
             />
           </label>
+
 
           <label className="flex flex-col">
             <span className="mb-4 font-medium text-tertiary">Message</span>

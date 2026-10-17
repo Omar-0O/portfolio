@@ -31,7 +31,7 @@ const FlipHeroText = ({ children }) => {
                 duration: DURATION,
                 ease: 'easeInOut',
                 delay: STAGGER * i,
-                repeat: 'Infinity',
+              repeat: Infinity,
                 repeatDelay: 2,
               }}
               className="inline-block"
@@ -62,7 +62,7 @@ const FlipHeroText = ({ children }) => {
                 duration: DURATION,
                 ease: 'easeInOut',
                 delay: STAGGER * i,
-                repeat: 'Infinity',
+              repeat: Infinity,
                 repeatDelay: 2,
               }}
               className="inline-block"

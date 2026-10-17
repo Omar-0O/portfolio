@@ -10,7 +10,7 @@ const styles = {
   heroSubText:
     'font-[500] text-white-300 text-[clamp(1.125rem,1.05rem+0.375vw,1.5rem)] ',
   sectionHeadText:
-    'text-white font-black md:text-[48.83px] sm:text-[42px] xs:text-[36px] text-[30px] sm:mb-24 mb-8',
+    'text-white font-black md:text-[48.83px] sm:text-[42px] xs:text-[36px] text-[30px] sm:mb-10 mb-6',
   sectionSubText:
     'text-tertiary font-para mb-[-3px] sm:text-[1.125rem] text-[0.875rem] uppercase tracking-wider',
   sectionText: `text-white-300 font-para sm:text-[1.125rem] text-[0.875rem] md:tracking-wider`,

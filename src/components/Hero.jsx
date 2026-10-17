@@ -6,6 +6,7 @@ import Socials from './Socials';
 import { TextFade } from './TextFade';
 import { useState } from 'react';
 import FlipHeroText from './FlipHeroText';
+import { PERSONAL_INFO } from '../constants';
 
 const Hero = () => {
   const [onHappy, setOnHappy] = useState(() => {});
@@ -27,27 +28,40 @@ const Hero = () => {
             >
               <h2 className={`${styles.heroSubText}`}>
                 Hi, I'm{' '}
-                <span className="inline-block animated-text">Ahmed Zeid</span>
+                <span className="inline-block animated-text">{PERSONAL_INFO.displayName}</span>
               </h2>
-              <FlipHeroText>Web Developer</FlipHeroText>
-              <h2 className={`${styles.heroSubHead} text-white-200`}>
-                I build thoughtful, high-quality web experiences that blend form
-                and function.
-                <br />
-                Clean design and seamless functionality guide every decision.
-                <br /> Let’s bring your vision to life — one pixel at a time.
+              <FlipHeroText>{PERSONAL_INFO.title}</FlipHeroText>
+
+              <h2 className={`${styles.heroSubHead} text-white-200 max-w-[620px]`}>
+                Building <span className="animated-text">scalable full-stack web platforms</span>,{' '}
+                <span className="animated-text">privacy-first native Android apps</span>, and{' '}
+                <span className="animated-text">real-time multimodal AI experiences</span>.
               </h2>
-              <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-8 gap-4 justify-start max-w-fit">
-                <CTABtn
-                  className="md:px-9 md:py-3 md:text-[1.25rem]"
-                  onMouseEnter={onHappy}
-                  onMouseLeave={onSad}
-                  onTouchStart={onHappy}
-                  onTouchEnd={onSad}
-                />
-                <Socials className="justify-between w-full sm:max-w-full max-w-[120px] self-center icons_large" />
+              <div className="mt-4 xs:text-[16px] flex flex-col items-start sm:gap-6 gap-4 justify-start max-w-fit">
+                <div className="flex flex-wrap items-center gap-4">
+                  <CTABtn
+                    href="#work"
+                    text="View Projects"
+                    className="md:px-8 md:py-3 md:text-[1.125rem]"
+                    onMouseEnter={onHappy}
+                    onMouseLeave={onSad}
+                    onTouchStart={onHappy}
+                    onTouchEnd={onSad}
+                  />
+                  <CTABtn
+                    href={`mailto:${PERSONAL_INFO.email}`}
+                    text="Contact Me"
+                    className="md:px-8 md:py-3 md:text-[1.125rem]"
+                    onMouseEnter={onHappy}
+                    onMouseLeave={onSad}
+                    onTouchStart={onHappy}
+                    onTouchEnd={onSad}
+                  />
+                </div>
+                <Socials className="justify-between w-full sm:max-w-full max-w-[130px] icons_large" />
               </div>
             </TextFade>
+
           </div>
         </div>
       </div>

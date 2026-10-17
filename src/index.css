@@ -598,10 +598,7 @@ ul.desc li::before {
 
 /* footer */
 .footer {
-  position: absolute;
-  bottom: 2rem;
-  /* left: 50%; */
+  position: relative;
   color: #919fba;
   opacity: 90%;
-  /* transform: translateX(-50%); */
 }

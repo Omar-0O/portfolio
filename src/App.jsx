@@ -4,6 +4,7 @@ import {
   Hero,
   Navbar,
   About,
+  Skills,
   Experience,
   Works,
   Contact,
@@ -14,6 +15,7 @@ import {
 
 import TechSlider from './components/TechSlider';
 import { ToastContainer } from 'react-toastify';
+import { PERSONAL_INFO } from './constants';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -38,16 +40,18 @@ const App = () => {
 
             <About />
             <TechSlider />
+            <Skills />
 
             <Experience />
+
 
             <Works />
             <AdditionalWorks />
             <div className="relative z-0">
               <Contact />
 
-              <footer className="w-full font-medium text-center footer">
-                &copy; Ahmed Zeid {new Date().getFullYear()}
+              <footer className="w-full py-6 font-medium text-center border-t footer border-white/5 text-white-200 text-sm">
+                &copy; 2026 Omar Mohamed Ahmed El-Sayed. All rights reserved.
               </footer>
             </div>
           </div>
@@ -58,3 +62,4 @@ const App = () => {
 };
 
 export default App;
+

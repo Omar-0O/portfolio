@@ -1,7 +1,29 @@
+const PERSONAL_INFO = {
+  fullName: 'Omar Mohamed Ahmed El-Sayed',
+  displayName: 'Omar Mohamed',
+  title: 'Software Engineer',
+  role: 'Software Engineer',
+  location: 'Cairo, Egypt',
+  email: 'Contact.OmarMohamed@gmail.com',
+  phone: '+20 106888907',
+  github: 'https://github.com/Omar-0O',
+  linkedin: 'https://www.linkedin.com/in/omar-el-sayed-21467837b/',
+  copyright: '© 2026 Omar Mohamed Ahmed El-Sayed. All rights reserved.',
+};
+
+
 export const navLinks = [
   {
     id: 'about',
     title: 'About',
+  },
+  {
+    id: 'skills',
+    title: 'Skills',
+  },
+  {
+    id: 'experience',
+    title: 'Experience',
   },
   {
     id: 'work',
@@ -13,323 +35,480 @@ export const navLinks = [
   },
 ];
 
-const tech = [
+const SKILL_CATEGORIES = [
   {
-    name: 'Next.JS',
-    color: '#21a366',
+    title: 'Languages',
+    icon: 'Code2',
+    description: 'Core programming and scripting languages for systems, mobile, and web.',
+    skills: [
+      'TypeScript',
+      'JavaScript (ES6+)',
+      'Kotlin',
+      'C#',
+      'SQL (PostgreSQL, T-SQL)',
+      'C++',
+      'Python',
+      'HTML5',
+      'CSS3',
+    ],
   },
+  {
+    title: 'Frontend & Mobile',
+    icon: 'Smartphone',
+    description: 'Modern reactive web and native Android client-side engineering.',
+    skills: [
+      'React 19',
+      'Next.js 15',
+      'Jetpack Compose',
+      'Material 3',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Radix UI',
+      'TanStack Query',
+      'Framer Motion',
+      'Vite',
+    ],
+  },
+  {
+    title: 'Backend & Databases',
+    icon: 'Database',
+    description: 'Robust server-side frameworks, ORMs, secure relational databases & CMS.',
+    skills: [
+      'ASP.NET Core (.NET 9)',
+      'Entity Framework Core',
+      'Supabase (PostgreSQL, Auth, RLS)',
+      'Microsoft SQL Server',
+      'Room / SQLite',
+      'Node.js',
+      'Strapi CMS',
+    ],
+  },
+  {
+    title: 'Architecture, AI & DevOps',
+    icon: 'Cpu',
+    description: 'Enterprise architecture patterns, real-time multimodal AI, CI/CD and tooling.',
+    skills: [
+      'Clean Architecture',
+      'MVVM',
+      'Hilt (DI)',
+      'Google Gemini Live API',
+      'WebSockets',
+      'Web Audio API',
+      'Git',
+      'GitHub Actions (CI/CD)',
+      'Vitest',
+      'JUnit',
+      'Linux',
+    ],
+  },
+];
+
+
+
+const tech = [
   {
     name: 'React',
     color: '#53c1de',
   },
-
   {
-    name: 'Node.JS',
-    color: '#21a366',
+    name: 'Next.js',
+    color: '#ffffff',
   },
   {
-    name: 'Tailwind',
-    color: '#21a366',
+    name: 'TypeScript',
+    color: '#3178c6',
   },
   {
-    name: 'Redux',
+    name: 'ASP.NET Core',
+    color: '#512bd4',
+  },
+  {
+    name: 'Kotlin',
+    color: '#7f52ff',
+  },
+  {
+    name: 'Jetpack Compose',
+    color: '#4285f4',
+  },
+  {
+    name: 'PostgreSQL',
+    color: '#336791',
+  },
+  {
+    name: 'Tailwind CSS',
+    color: '#38bdf8',
+  },
+  {
+    name: 'CI/CD & DevOps',
     color: '#21a366',
   },
 ];
+
 
 const EXPERIENCES = [
   {
-    title: 'Full-Stack Developer',
-    company: 'Magic Apps AI',
-    date: 'May 2023 - Present (Contract)',
+    type: 'Experience',
+    badge: 'Volunteer Production Role',
+    title: 'Software Engineer & Application Maintainer (Volunteer)',
+    company: 'Resala Training Center (RTC) – Resala Charity Organization',
+    location: 'Cairo, Egypt',
+    website: 'https://resalartc.online',
+    date: '2024 – Present',
     description: [
-      'Built and maintained 4 AI-powered SaaS apps over 2 years, handling full-stack development, performance tuning, and feature delivery across a remote team.',
-      'Developed BrainChat.ai from scratch — a multi-agent AI chat platform supporting OpenAI, Gemini, Claude, Mistral, with tools like image generation, web search, and data analysis.',
-      'Created Chatio.ai, a chatbot builder for websites that generates knowledge bases from crawled content.',
-      'Contributed to WebMagic.ai and EmailMagic.ai, AI-based Chrome extensions with supporting web apps and dashboards for content summarization and user management.',
+      'Actively own, develop, and maintain the official production platform (resalartc.online) used daily by the organization to manage internal operations, volunteer participation, courses, trainers, and beneficiaries.',
+      'Engineered granular PostgreSQL/Supabase Row-Level Security (RLS) policies and versioned SQL migrations across 600+ commits to secure multi-branch and role-based workflows.',
+      'Established automated CI/CD workflows using GitHub Actions for type-checking, linting, Vitest unit testing, and security scanning.',
     ],
     stack: [
-      'Next.js',
-      'Node.js',
-      'Langchain',
-      'PostgreSQL',
-      'AWS',
-      'Redux',
-      'Tailwind',
-      'ShadCN',
+      'React 18',
+      'TypeScript',
+      'Supabase',
+      'PostgreSQL RLS',
+      'GitHub Actions',
+      'Vitest',
+      'Tailwind CSS',
     ],
-  },
-  {
-    title: 'Frontend Web Developer',
-    company: 'Quran Tab',
-    date: 'Nov 2023 – Present (Seasonal)',
-    description: [
-      'Enhanced Quranic translation API for real-time accuracy.',
-      'Developed an accessible user interface for translations.',
-      'Implemented end-to-end tests for cross-browser stability.',
-    ],
-    stack: ['React', 'SCSS', 'Playwright', 'Chakra UI', 'TypeScript'],
-  },
-  {
-    title: 'Software Engineer Intern',
-    company: 'Kalbonyan Elmarsos',
-    date: 'Dec 2022 – Jul 2023',
-    description: [
-      'Completed an extensive internship covering modern web development technologies and tools.',
-      'Built multiple projects showcasing full-stack skills, emphasizing frontend-backend synergy.',
-    ],
-    stack: ['React', 'Node.js', 'CSS', 'MongoDB', 'AWS', 'Styled Components'],
   },
 ];
+
+const EDUCATION = [
+  {
+    type: 'Education',
+    badge: 'Applied Technology Education',
+    title: 'Diploma in Software Development',
+    institution: 'Eva International Applied Technology School',
+    location: 'Cairo, Egypt',
+    date: 'Enrolled / In Progress',
+    description: [
+      'Rigorous software engineering curriculum with deep focus on Object-Oriented Programming (OOP), Data Structures & Algorithms, Relational Databases, UML, and Full-Stack Development.',
+      'Practical engineering of layered backend architectures, secure RESTful APIs, and responsive client-side web and mobile systems.',
+      'Comprehensive training in software design patterns, team Git workflows, database schema modeling, and unit testing.',
+    ],
+    focus: [
+      'OOP',
+      'Data Structures & Algorithms',
+      'Relational Databases',
+      'UML',
+      'Full-Stack Development',
+      'C# / ASP.NET',
+      'Software Architecture',
+    ],
+  },
+];
+
+const ACHIEVEMENTS_LEADERSHIP = [
+  {
+    title: 'Competitive Programmer & Problem Solver',
+    organization: 'Algorithmic & Data Structures Focus',
+    badge: 'Competitive Programming',
+    icon: 'Code2',
+    description:
+      'Actively engaged in algorithmic problem solving, competitive programming contests (Codeforces), and low-level system design using C++ and modern programming paradigms.',
+  },
+  {
+    title: 'Committee Head & Technical Mentor',
+    organization: 'Volunteer Community Initiatives & Workshops',
+    badge: 'Leadership & Mentorship',
+    icon: 'Users',
+    description:
+      'Led volunteer development initiatives and organized interactive student programming workshops covering Git, GitHub version control, modern web development, and clean architecture practices.',
+  },
+];
+
+const PROJECT_IMAGES = {
+  rtc: [
+    '/projects/rtc/cover.svg',
+    'https://placehold.co/1200x675/0f172a/38bdf8?text=RTC+Operations+Platform',
+  ],
+  evaSchool: [
+    '/projects/eva-school/cover.svg',
+    'https://placehold.co/1200x675/0f172a/6366f1?text=Eva-School+.NET+Backend+API',
+  ],
+  silah: [
+    '/projects/silah/cover.svg',
+    'https://placehold.co/1200x675/0f172a/a855f7?text=Silah+Android+App',
+  ],
+  evalyzer: [
+    '/projects/evalyzer/cover.svg',
+    'https://placehold.co/1200x675/0f172a/10b981?text=Evalyzer+Gemini+Live+AI',
+  ],
+  quranOnline: [
+    '/projects/quran-online/cover.svg',
+    'https://placehold.co/1200x675/0f172a/f59e0b?text=Quran+Online+Platform',
+  ],
+  medicalRep: [
+    '/projects/medical-rep/cover.svg',
+    'https://placehold.co/1200x675/0f172a/ec4899?text=Medical+Rep+Dashboard',
+  ],
+};
 
 const projects = [
   {
-    name: 'BrainChat.ai',
-    live: 'https://app.brainchat.ai',
-    github: '',
+    name: 'RTC — Volunteer Operations & Participation Platform',
+    live: 'https://resalartc.online',
+    github: 'https://github.com/Omar-0O/RTC',
     description: [
       {
         highlight: true,
-        text: 'AI-powered platform',
+        text: 'Production volunteer-operations platform',
       },
       {
         highlight: false,
-        text: ' with multi-model chat across leading providers like OpenAI, Gemini, and Claude. Includes advanced tools for',
+        text: ' for Resala Training Center (600+ commits) replacing manual tracking with role- and branch-aware workflows for courses, trainers, attendance, and beneficiaries. Secured with ',
       },
       {
         highlight: true,
-        text: ' image generation, web search, and data analysis.',
+        text: 'PostgreSQL Row-Level Security (RLS)',
       },
       {
         highlight: false,
-        text: ' Supports custom',
+        text: ' and automated ',
       },
       {
         highlight: true,
-        text: ' Agents',
+        text: 'GitHub Actions CI/CD',
       },
       {
         highlight: false,
-        text: ' and',
-      },
-      {
-        highlight: true,
-        text: ' Prompts',
-      },
-      {
-        highlight: false,
-        text: ', with shared',
-      },
-      {
-        highlight: true,
-        text: ' workspaces',
-      },
-      {
-        highlight: false,
-        text: ' for team collaboration on Chats, Agents, and Prompts.',
+        text: '.',
       },
     ],
     stack: [
-      'Next.js',
-      'Node.js',
-      'Redux',
-      'Shadcn',
-      'Langchain',
-      'IndexedDB',
-      'AWS',
-      'PostgreSQL',
+      'React 18',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'shadcn/ui',
+      'Supabase',
+      'PostgreSQL RLS',
+      'TanStack Query',
+      'Vitest',
+      'GitHub Actions',
     ],
-    images: [
-      '/projects/brainchat/0.png',
-      '/projects/brainchat/1.png',
-      '/projects/brainchat/2.png',
-      '/projects/brainchat/3.png',
-      '/projects/brainchat/4.png',
-    ],
+    images: PROJECT_IMAGES.rtc,
   },
   {
-    name: 'Chatio.ai',
-    live: 'https://app.chatio.ai',
-    github: '',
+    name: 'Eva-School — Student Results & Grade Management Backend API',
+    live: '',
+    github: 'https://github.com/Eva-School/Backend_Project/tree/dev',
     description: [
       {
         highlight: true,
-        text: 'Custom chatbot builder',
+        text: 'Layered school-management backend',
       },
       {
         highlight: false,
-        text: ' that crawls websites to generate a dynamic knowledge base for accurate, tailored responses.',
-      },
-      {
-        highlight: false,
-        text: ' With an',
+        text: ' (Api, Core, Repository, Services, Tests) handling academic dashboards, competency records, quarter/final grades, approvals, and audit logs. Engineered role-based ',
       },
       {
         highlight: true,
-        text: ' embeddable script',
+        text: 'JWT/Identity authentication',
       },
       {
         highlight: false,
-        text: ', users can easily integrate chatbots into their sites to boost engagement.',
+        text: ', PostgreSQL/EF Core migrations, and ',
+      },
+      {
+        highlight: true,
+        text: 'Docker/Render deployment',
+      },
+      {
+        highlight: false,
+        text: ' configurations while providing technical direction across the team.',
       },
     ],
-    stack: ['Next.js', 'Langchain', 'Pinecone', 'Supabase'],
-    images: [
-      '/projects/chatio/0.png',
-      '/projects/chatio/1.png',
-      '/projects/chatio/2.png',
-      '/projects/chatio/3.png',
-      '/projects/chatio/4.png',
+    stack: [
+      'C#',
+      'ASP.NET Core (.NET 10)',
+      'Entity Framework Core 10',
+      'PostgreSQL (Npgsql)',
+      'ASP.NET Identity',
+      'JWT',
+      'AutoMapper',
+      'Scalar/OpenAPI',
+      'Docker',
+      'xUnit',
     ],
+    images: PROJECT_IMAGES.evaSchool,
   },
   {
-    name: 'Jobify - Job Tracking App',
-    live: 'https://jobify-gryo.onrender.com/',
-    github: 'https://github.com/Ginryo0/Jobify---MERN-Project',
+    name: 'Silah — Local-First Android Family-Connection App',
+    live: '',
+    github: 'https://github.com/Omar-0O/Silah',
     description: [
       {
         highlight: true,
-        text: 'Job tracking app',
+        text: 'Privacy-first native Android application',
       },
       {
         highlight: false,
-        text: ' built with the MERN stack to manage and monitor job applications.',
+        text: ' built with Clean Architecture and MVVM to track family communication logs on-device. Features ',
+      },
+      {
+        highlight: true,
+        text: 'contact/call-log synchronization',
       },
       {
         highlight: false,
-        text: ' It helps job seekers stay organized and streamline their search process.',
+        text: ', WorkManager scheduled reminders, and an ',
+      },
+      {
+        highlight: true,
+        text: 'urgency-based home-screen widget',
+      },
+      {
+        highlight: false,
+        text: '.',
       },
     ],
-    stack: ['React', 'Node.js', 'MongoDB', 'Styled Components'],
-    images: [
-      '/projects/jobify/0.png',
-      '/projects/jobify/1.png',
-      '/projects/jobify/2.png',
-      '/projects/jobify/3.png',
+    stack: [
+      'Kotlin',
+      'Jetpack Compose',
+      'Material 3',
+      'Room/SQLite',
+      'Hilt',
+      'Coroutines/StateFlow',
+      'WorkManager',
+      'Robolectric',
     ],
+    images: PROJECT_IMAGES.silah,
   },
-  // {
-  //   name: 'Appie - Landing Page',
-  //   live: 'https://appie-gryo.netlify.app/',
-  //   github: 'https://github.com/Ginryo0/Appie',
-  //   paragraph: `Appie is a landing page built using HTML and CSS. The page has a clean layout and visually appealing design. It imitates a word press theme and It was actually my first task at`,
-  //   inLink: {
-  //     link: 'https://www.albonyanalmarsos.org/',
-  //     name: 'Kalbonyan Almarsos',
-  //   },
-  //   tools: ['HTML', 'CSS'],
-  //   img: appie,
-  // },
-  // {
-  //   name: 'Breakout Game',
-  //   live: 'https://breakout-gryo.netlify.app/',
-  //   github:
-  //     'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main/Projects/17-Breakout',
-  //   paragraph:
-  //     'Breakout is a classic arcade-style game that has been recreated as a web app using HTML, CSS, and JavaScript. I built it using canvas element. It involves controlling a paddle at the bottom of the screen to bounce a ball and break through a wall of bricks at the top of the screen. I added 3 difficulty levels each has different game settings and UI. It was a part of my',
-  //   inLink: {
-  //     link: 'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main/Projects',
-  //     name: '20 Vanilla Web Projects',
-  //   },
-  //   tools: ['HTML', 'CSS', 'Javascript'],
-  //   img: breakout,
-  // },
+  {
+    name: 'Evalyzer — Real-Time Multimodal AI Skincare Consultant',
+    live: '',
+    github: 'https://github.com/Omar-0O/Evalyzer',
+    description: [
+      {
+        highlight: true,
+        text: 'Interactive Arabic voice- and camera-led skincare assistant',
+      },
+      {
+        highlight: false,
+        text: ' powered by Google Gemini Live API. Engineered a ',
+      },
+      {
+        highlight: true,
+        text: 'low-latency WebSocket audio pipeline',
+      },
+      {
+        highlight: false,
+        text: ' (16kHz PCM capture, 24kHz playback, voice interruption) and ',
+      },
+      {
+        highlight: true,
+        text: 'AI function-calling',
+      },
+      {
+        highlight: false,
+        text: ' for dynamic UI navigation.',
+      },
+    ],
+    stack: [
+      'React 19',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS 4',
+      'Google GenAI SDK',
+      'WebSockets',
+      'Web Audio API',
+    ],
+    images: PROJECT_IMAGES.evalyzer,
+  },
+  {
+    name: 'Quran Online — Reading, Search & Audio Platform',
+    live: 'https://quran-app-ocz7.vercel.app/',
+    github: 'https://github.com/Omar-0O/quran-app',
+    description: [
+      {
+        highlight: true,
+        text: 'Responsive Quran platform',
+      },
+      {
+        highlight: false,
+        text: ' for verse search, reading, and customizable audio recitations via Every Ayah API. Includes a ',
+      },
+      {
+        highlight: true,
+        text: 'custom audio player',
+      },
+      {
+        highlight: false,
+        text: ' with buffering/seeking and ',
+      },
+      {
+        highlight: true,
+        text: 'server-side route handlers',
+      },
+      {
+        highlight: false,
+        text: ' for offline downloads by Surah, Juz, and Hizb.',
+      },
+    ],
+    stack: [
+      'Next.js 15',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS 4',
+      'Axios',
+      'Next.js Route Handlers',
+    ],
+    images: PROJECT_IMAGES.quranOnline,
+  },
+  {
+    name: 'Medical Rep Field-Sales Portal (Prototype)',
+    live: 'https://medical-rep-psi.vercel.app/',
+    github: 'https://github.com/Omar-0O/Medical-rep',
+    description: [
+      {
+        highlight: true,
+        text: 'Role-based field-sales dashboard',
+      },
+      {
+        highlight: false,
+        text: ' separating administrator and representative workflows for managing clients, products, orders, ',
+      },
+      {
+        highlight: true,
+        text: 'route tracking',
+      },
+      {
+        highlight: false,
+        text: ', and ',
+      },
+      {
+        highlight: true,
+        text: 'sales analytics',
+      },
+      {
+        highlight: false,
+        text: '.',
+      },
+    ],
+    stack: [
+      'React 18',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'React Router',
+      'shadcn/ui',
+    ],
+    images: PROJECT_IMAGES.medicalRep,
+  },
 ];
 
-const additionalProjects = [
-  {
-    name: 'WebMagi.ai',
-    live: 'https://dashboard.webmagic.ai/login?callbackUrl=https%3A%2F%2Fdashboard.webmagic.ai%2F',
-    github: '',
-    paragraph:
-      'A SaaS platform for generating summaries from web pages, files, and text. Offers a Chrome extension and dashboard where users can produce summaries with varying levels of complexity and contextual depth and share them with friends',
-    tools: ['Next.js', 'Express.js', 'Prisma', 'AWS EC2'],
-  },
-  {
-    name: 'EmailMagic.ai',
-    live: 'https://chromewebstore.google.com/detail/emailmagic-ai-email-assis/kddkonheakdfpnffdbfifhnbjehkaini',
-    github: '',
-    paragraph:
-      'Chrome extension for generating tailored emails directly within the Gmail UI, with topic and tone control—supported by a dashboard for account management and onboarding',
-    tools: ['Fastify.js', 'React.js', 'PostgreSQL', 'Plasmo'],
-  },
-  {
-    name: 'Serverless Functions - Mini Projects',
-    live: 'https://serverless-fncs-gryo.netlify.app/',
-    github: 'https://github.com/Ginryo0/Serverless-Functions',
-    paragraph:
-      'This is a project that focuses on AWS Serverless Lambda functions. It includes 8 mini applications like Weather App, Newsletter App and more',
-    tools: ['CSS', 'Javascript', 'AWS Lambda'],
-  },
-  {
-    name: '20 Vanilla Web Projects',
-    github: 'https://github.com/Ginryo0/20-Vanilla-Web-Projects/tree/main',
-    paragraph:
-      'These are 20 Web Applications that focus heavily on Javascript and CSS. They utilize different browser APIs, External APIs, local storage and much more. I really encourage you to give them a look',
-    tools: ['HTML', 'CSS', 'Javascript'],
-  },
-  {
-    name: 'Appie - Landing Page',
-    live: 'https://appie-gryo.netlify.app/',
-    github: 'https://github.com/Ginryo0/Appie',
-    paragraph:
-      'Appie is a landing page built with HTML and CSS. It mimics a WordPress theme with a clean layout and was my first project during my internship',
+const additionalProjects = [];
 
-    tools: ['HTML', 'CSS'],
-  },
-  // {
-  //   name: 'React Meals',
-  //   live: 'https://food-order-gryo.netlify.app/',
-  //   github: 'https://github.com/Ginryo0/ReactMeals',
-  //   paragraph:
-  //     'React meals is a food order App built with react. You get 5 dishes you can choose from. You can add any of them to cart, fill a form to place an order',
-  //   tools: ['React', 'CSS'],
-  // },
-  // {
-  //   name: 'Kanban Board',
-  //   live: 'https://kanbanboard-gryo.netlify.app/',
-  //   github: 'https://github.com/Ginryo0/Kanban-Board',
-  //   paragraph:
-  //     'Kanban board is a visual tool used to manage tasks and workflow in a project. This project was built mainly with Javascript. It utilizes drag events, touch events and local storage to ensure a good user experience across different platforms. That was my second task at',
-  //   inLink: {
-  //     link: 'https://www.albonyanalmarsos.org/',
-  //     name: 'Kalbonyan Almarsos',
-  //   },
-  //   tools: ['HTML', 'CSS', 'Javascript'],
-  // },
-  // {
-  //   name: 'Node Shop',
-  //   live: 'https://node-4y1s.onrender.com/',
-  //   github: 'https://github.com/Ginryo0/Node-Deployment',
-  //   paragraph:
-  //     'This is a shop application that is focused mainly on backend. It has many features including: adding new products, editing and deleting them by admin, shopping cart, integrating stripe for checkout , a PDF invoice for each order and much more',
-  //   tools: ['Express', 'MongoDB', 'EJS', 'API', 'Stripe'],
-  // },
-  // {
-  //   name: 'Omnifood',
-  //   live: 'https://omnifood-gryo.netlify.app/',
-  //   github: 'https://github.com/Ginryo0/omnifood',
-  //   paragraph:
-  //     'Omnifood is a Landing page for a tech company that uses AI to ensure customers eat healthy food',
-  //   tools: ['HTML', 'CSS'],
-  // },
-  // {
-  //   name: 'Social Feed',
-  //   live: 'https://social-feed-gryo.onrender.com/',
-  //   github: 'https://github.com/Ginryo0/Node-Feed',
-  //   paragraph:
-  //     'Social Feed is a full stack project that imitates social media posts. It uses WebSockets to ensure feed posts are always up-to-date',
-  //   tools: ['Express', 'MongoDB', 'WebSockets', 'GraphQl'],
-  // },
+export {
+  PERSONAL_INFO,
+  SKILL_CATEGORIES,
+  PROJECT_IMAGES,
+  tech,
+  EXPERIENCES,
+  EDUCATION,
+  ACHIEVEMENTS_LEADERSHIP,
+  projects,
+  additionalProjects,
+};
 
-  // {
-  //   name: 'Redux Cart',
-  //   live: 'https://redux-cart-gryo.netlify.app/',
-  //   github: 'https://github.com/Ginryo0/ReduxCart',
-  //   paragraph:
-  //     'Redux Cart is a simple cart app that utilizes react redux and firebase to manage and store cart state',
-  //   tools: ['React', 'Redux', 'Firebase'],
-  // },
-];
 
-export { tech, EXPERIENCES, projects, additionalProjects };
+

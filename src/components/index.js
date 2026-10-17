@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
 import Achievements from './Achievements';
+import Skills from './Skills';
 import Experience from './Experience';
 import Works from './Works';
 import AdditionalWorks from './AdditionalWorks';
@@ -16,6 +17,7 @@ export {
   Navbar,
   About,
   Achievements,
+  Skills,
   Experience,
   Works,
   AdditionalWorks,
@@ -26,3 +28,4 @@ export {
   Loader,
   CanvasLoader,
 };
+

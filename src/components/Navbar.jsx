@@ -18,9 +18,35 @@ const Navbar = () => {
 
   const logoIcon = useRef();
   const scrollPosition = useScrollPosition();
+
+  // Update active link based on which section is in view
+  useEffect(() => {
+    const sectionIds = navLinks.map((l) => l.id);
+    const observers = [];
+
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            const link = navLinks.find((l) => l.id === id);
+            if (link) setActive(link.title);
+          }
+        },
+        { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' }
+      );
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   useEffect(() => {
     if (scrollPosition === 0) {
       setNavClass('');
+      setActive('');
     } else if (oldPosition > scrollPosition) {
       setNavClass('nav_shown');
     } else if (oldPosition < scrollPosition) {
